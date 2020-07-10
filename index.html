@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>~</title>
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="clock"></div>
+    <div id="date"></div>
+
+    <div id="welcome"></div>
+    <script>
+      var today = new Date()
+      var curHr = today.getHours()
+
+      //Change the name here!
+      var name = 'Akash'
+
+      if (curHr >= 0 && curHr < 6) {
+        document.getElementById('welcome').innerHTML = 'What are you doing that early?'
+      } else if (curHr >= 6 && curHr < 12) {
+        document.getElementById('welcome').innerHTML = 'Good Morning, ' + name
+      } else if (curHr >= 12 && curHr < 17) {
+        document.getElementById('welcome').innerHTML = 'Good Afternoon, ' + name
+      } else {
+        document.getElementById('welcome').innerHTML = 'Good Evening, ' + name
+      }
+    </script>
+
+    <div class="searchBox" id="searchBox">
+      <form action="https://www.google.com/" method="get">
+        <input
+          class="inputBox"
+          id="searchInput"
+          type="text"
+          name="q"
+          placeholder="Search something..."
+          tabindex="2"
+        />
+      </form>
+    </div>
+
+    <!-- Shortcuts grid -->
+    <section class="container-items">
+      <div class="school-links">
+        <h1>Servers</h1>
+
+        <ul>
+          <li><a class="mid" href="https://10.0.1.2/">Nextcloud</a></li>
+          <li><a class="mid" href="https://10.0.1.10:5010/">Home NAS</a></li>
+          <li><a class="mid" href="http://10.0.1.16:8050/">Bookmark Manager</a></li>
+          <li><a class="mid" href="http://10.0.1.16/admin/">PiHole</a></li>
+          <li><a class="mid" href="http://10.0.1.2:9000/">Portainer</a></li>
+          <li><a class="mid" href="http://10.0.1.16:3000/">System Monitoring</a></li>
+          <li><a class="mid" href="http://10.0.1.2:8020/">Document Manager</a></li>
+          <li><a class="mid" href="http://10.0.1.2:8040/">CyberChef</a></li>
+          <li><a class="mid" href="https://hacstac.herokuapp.com">Expense Manager</a></li>
+        </ul>
+      </div>
+
+      <div class="social-links">
+        <h1>Work</h1>
+
+        <ul>
+          <li><a class="mid" href="https://github.com/">Github</a></li>
+          <li><a class="mid" href="https://www.reddit.com/">Reddit</a></li>
+          <li><a class="mid" href="https://www.youtube.com/">YouTube</a></li>
+          <li><a href="https://twitter.com/home" class="mid">Twitter</a></li>
+          <li><a class="mid" href="https://mail.google.com/">Mail</a></li>
+          <li><a class="mid" href="https://app.asana.com/0/home/1182452471393546">Planning</a></li>
+          <li><a class="mid" href="https://todoist.com/app/#start">Todoist</a></li>
+          <li><a class="mid" href="https://app.pomodoneapp.com/#/dashboard">Pomodone</a></li>
+          <li><a class="mid" href="https://toggl.com/app/timer">Toggl</a></li>
+          <li><a class="mid" href="https://roamresearch.com/#/app/hacstac">Notes</a></li>
+        </ul>
+      </div>
+
+      <div class="work-links">
+        <h1>College</h1>
+
+        <ul>
+          <li><a class="mid" href="https://www.btu.ac.in/BTU/">University</a></li>
+          <li><a class="mid" href="http://www.ecb.ac.in/">College</a></li>
+          <li><a class="mid" href="https://ecberp.com/">Fees</a></li>
+          <li><a class="mid" href="https://btu.ucanapply.com/smartexam/public/">Result</a></li>
+        </ul>
+      </div>
+
+      <div class="other-links">
+        <h1>other</h1>
+
+        <ul>
+          <li><a class="mid" href="https://medium.com/">Medium</a></li>
+          <li><a class="mid" href="https://hashnode.com/">Hashnode</a></li>
+          <li><a class="mid" href="https://dev.to">DevTo</a></li>
+          <li><a href="https://www.reddit.com/r/GetStudying/" class="mid">r/GetStudying</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="js/time.js"></script>
+    <script src="js/date.js"></script>
+  </body>
+</html>
